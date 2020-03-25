@@ -8,8 +8,8 @@ const NavBar = () => {
     <AppBar position="fixed">
       <div style={{width: "100%", maxWidth: "1200px", margin: "0 auto"}}>
         <Toolbar>
-          <Typography variant="h6">
-            Sanitizr
+          <Typography variant="h5">
+            <span style={{fontWeight: "700"}}>Sanitizr App</span>
           </Typography>
         </Toolbar>
       </div>
