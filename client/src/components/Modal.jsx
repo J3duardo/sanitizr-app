@@ -52,7 +52,12 @@ const Modal = (props) => {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={closeDialogHandler} color="secondary" autoFocus>
+        <Button
+          autoFocus
+          variant="contained"
+          color="secondary"
+          onClick={closeDialogHandler}
+        >
           <strong>OK</strong>
         </Button>
       </DialogActions>

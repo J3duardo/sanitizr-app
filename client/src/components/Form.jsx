@@ -20,12 +20,16 @@ import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 const styles = (theme) => ({
   formContainer: {
     width: "90%",
-    maxWidth: "500px",
+    maxWidth: "600px",
     margin: "0 auto"
   },
-  formTitle: {
+  textContainer: {
     textAlign: "center",
-    margin: "1.5rem 0 3rem 0"
+    margin: "1rem 0 1.5rem 0"
+  },
+  title: {
+    marginBottom: "0.5rem",
+    textTransform: "uppercase"
   },
   checkboxesContainer: {
     marginBottom: "1.5rem",
@@ -137,12 +141,19 @@ const Form = (props) => {
       <Modal open={openDialog} modalType={dialogType} isOpen={openDialogHandler} textContent={results}/>
         <Grid container>
           <Grid item>
-            <Typography className={props.classes.formTitle} variant="h4">Calculadora de hipoclorito para producción de antiséptico.</Typography>
+            <div className={props.classes.textContainer}>
+              <Typography className={props.classes.title} variant="h5">
+                <span style={{fontWeight: 700}}>Calculadora de hipoclorito de sodio para producción de antisépticos.</span>
+              </Typography>
+              <Typography variant="body1">
+                Calcular la cantidad requerida de Hipoclorito de Sodio para producir la cantidad especificada de solución diluida para el lavado de manos o desinfección de superficies.
+              </Typography>
+            </div>
             <Paper style={{padding: "1rem 1.5rem 1.5rem 1.5rem"}}>
               <form noValidate>
                 <div className={props.classes.checkboxesContainer}>
                   <Typography variant="h6">
-                    Elija el tipo de solución a preparar:
+                    <span style={{fontWeight: 400}}>Elija el tipo de solución a preparar:</span>
                     <Tooltip title="Más información" onClick={() => openDialogHandler(true, "info")}>
                       <IconButton>
                         <HelpIcon color="secondary" />
