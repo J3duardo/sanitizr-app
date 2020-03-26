@@ -22,11 +22,20 @@ const styles = (theme) => ({
   formContainer: {
     width: "90%",
     maxWidth: "600px",
-    margin: "0 auto"
+    margin: "0 auto",
+
+    [theme.breakpoints.down(450)]: {
+      width: "100%"
+    }
   },
   textContainer: {
+    width: "90%",
+    margin: "1rem auto 1.5rem auto",
     textAlign: "center",
-    margin: "1rem 0 1.5rem 0"
+
+    [theme.breakpoints.down(450)]: {
+      marginTop: 0
+    }
   },
   title: {
     marginBottom: "0.5rem",

@@ -3,7 +3,7 @@ import React from 'react';
 const FacebookShareBtn = () => {
   return (
     <div
-      class="fb-share-button"
+      className="fb-share-button"
       data-href="https://sanitizr-app.herokuapp.com/"
       data-size="large"
       data-layout="button"
