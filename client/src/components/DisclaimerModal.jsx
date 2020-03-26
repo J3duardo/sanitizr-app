@@ -23,10 +23,10 @@ const DisclaimerModal = () => {
       <DialogTitle id="alert-dialog-title">¡Precaución!</DialogTitle>
       <DialogContent dividers>
         <DialogContentText id="alert-dialog-description">
-          <p>El Hipoclorito de Sodio es una sustancia tóxica y corrosiva, su uso y manejo inadecuados pueden producir resultados indeseados.</p>
-          <p>El Hipoclorito de Sodio, aún en concentraciones bajas, puede producir irritación de la piel, especialmente en personas con pieles sensibles. Aunque se ha demostrado su eficacia en la eliminación de diversos organismos patógenos al emplearse como desinfectante alternativo en el lavado de las manos en concentraciones diluidas, su uso excesivo o continuo podría generar resultados indeseados. Es por ello que se debe considerar como un último recurso.</p>
-          <p>Los íconos de signo de interrogación muestran información más detallada, ante las dudas haga click en ellos para obtener más información acerca del item correspondiente.</p>
-          <p>Al usar esta aplicación acepta que <strong>usted y sólo usted</strong> tiene total responsabilidad en el uso de la misma así como cualquier daño a su persona o a terceros que pudieran derivar del uso inadecuado de la información que aquí se presenta.</p>
+          <span style={{display: "block", marginBottom: "1rem"}}>El Hipoclorito de Sodio, utilizado comúnmente como blanqueador para ropa (mal llamado &laquo;cloro&raquo;), es una sustancia tóxica y corrosiva, su uso y manejo inadecuados pueden producir resultados indeseados.</span>
+          <span style={{display: "block", marginBottom: "1rem"}}>El Hipoclorito de Sodio, aún en concentraciones bajas, puede producir irritación de la piel, especialmente en personas con pieles sensibles. Aunque se ha demostrado su eficacia en la eliminación de diversos organismos patógenos al emplearse como desinfectante alternativo en el lavado de las manos en concentraciones diluidas, su uso excesivo o continuo podría generar resultados indeseados. Es por ello que se debe considerar como un último recurso.</span>
+          <span style={{display: "block", marginBottom: "1rem"}}>Los íconos de ayuda presentes en la aplicación muestran información más detallada, ante las dudas haga click en ellos para obtener más información acerca del item correspondiente.</span>
+          <span>Al usar esta aplicación acepta que <strong>usted y sólo usted</strong> acepta total responsabilidad en el uso de la misma así como cualquier daño a su persona o a terceros que pudieran derivar del uso indebido de la información que se presenta en la misma.</span>
         </DialogContentText>
       </DialogContent>
       <DialogActions>
@@ -35,7 +35,6 @@ const DisclaimerModal = () => {
           variant="contained"
           color="secondary"
           onClick={handleClose}
-          color="secondary"
         >
           Aceptar
         </Button>
