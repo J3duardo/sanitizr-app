@@ -16,6 +16,7 @@ import Modal from "./Modal";
 import HelpIcon from "@material-ui/icons/Help";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
+import FacebookShareBtn from "./FacebookShareBtn";
 
 const styles = (theme) => ({
   formContainer: {
@@ -248,6 +249,9 @@ const Form = (props) => {
                 </Button>
               </form>
             </Paper>
+            <div style={{display: "flex", justifyContent: "center", marginTop: "1rem"}}>
+              <FacebookShareBtn />
+            </div>
           </Grid>
         </Grid>
     </div>
