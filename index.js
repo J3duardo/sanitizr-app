@@ -1,9 +1,12 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+require("dotenv").config();
 
 const app = express();
 const port = process.env.PORT || 5000;
+
+const {contactForm} = require("./emailSender");
 
 app.use(express.json());
 app.use(cors());
@@ -15,6 +18,7 @@ if(process.env.NODE_ENV === "production") {
   });
 }
 
+// Ruta para procesar los cálculos
 app.post("/calculate", (req, res) => {
   let NaClO = null;
   let volReq = null;
@@ -47,6 +51,9 @@ app.post("/calculate", (req, res) => {
     })
   }
 })
+
+// Ruta para enviar el email
+app.post("/contact", contactForm);
 
 app.listen(port, (error) => {
   if(error) {
