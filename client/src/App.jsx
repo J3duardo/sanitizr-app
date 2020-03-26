@@ -1,9 +1,11 @@
 import React, {useState} from "react";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {MuiThemeProvider} from "@material-ui/core/styles";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
 import Form from "./components/Form";
 import NavBar from "./components/AppBar";
 import Footer from "./components/Footer";
+import ContactForm from "./components/ContactForm";
 import WelcomeScreen from "./components/WelcomeScreen";
 import DisclaimerModal from "./components/DisclaimerModal";
 import "./App.css";
@@ -43,10 +45,15 @@ const App = (props) => {
       <WelcomeScreen continueToApp={continueToApp} exitWelcome={exitWelcome} />
       <DisclaimerModal />
       <div className="main-container">
-        <NavBar />
-        <div className="container">
-          <Form />
-        </div>
+        <BrowserRouter>
+          <NavBar />
+          <div className="container">
+            <Switch>
+              <Route path="/" exact component={Form} />
+              <Route path="/contact" exact component={ContactForm} />
+             </Switch>
+          </div>
+        </BrowserRouter>
         <Footer />
       </div>
     </MuiThemeProvider>
