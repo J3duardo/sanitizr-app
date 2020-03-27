@@ -16,7 +16,7 @@ exports.contactForm = async (req, res) => {
       <h4>Mensaje:</h4>
       <p>${req.body.message}</p>
       <hr/>
-      <p>SeoBlog Team</p>
+      <p>Sanitizr Team</p>
     `
   }
 
