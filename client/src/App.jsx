@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import {MuiThemeProvider} from "@material-ui/core/styles";
-import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import {MuiThemeProvider, createMuiTheme} from "@material-ui/core/styles";
 import Form from "./components/Form";
 import NavBar from "./components/AppBar";
 import Footer from "./components/Footer";
